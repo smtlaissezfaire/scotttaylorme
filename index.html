@@ -1,26 +1,25 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Scott Taylor — entrepreneur and software developer in the Bay Area."
-    />
-    <title>Scott Taylor</title>
+    <meta name="description" content="{{ site.description }}" />
+    <title>{{ site.title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
   </head>
   <body>
     <header class="site-header">
       <div class="container">
         <p class="eyebrow">ScottTaylor.me</p>
-        <h1>Scott Taylor</h1>
+        <h1>{{ site.title }}</h1>
         <p class="lead">
           Entrepreneur and software developer based in the Bay Area, California.
         </p>
@@ -46,7 +45,29 @@
           <h2 id="projects-heading">Projects</h2>
           <p>Things I’ve built, run, or am working on.</p>
         </div>
-        <ul id="project-list" class="project-list"></ul>
+        <ul class="project-list">
+          {% for project in site.data.projects %}
+          <li class="project-card">
+            <span class="project-tag">{{ project.tag }}</span>
+            <h3 class="project-title">
+              {% if project.url %}
+              <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+              {% else %}
+              {{ project.name }}
+              {% endif %}
+            </h3>
+            <div class="project-description">
+              {% assign paragraphs = project.description | strip | split: "\n\n" %}
+              {% for paragraph in paragraphs %}
+              <p>{{ paragraph }}</p>
+              {% endfor %}
+            </div>
+            {% if project.url %}
+            <a class="project-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">Visit →</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
       </section>
     </main>
 
@@ -55,8 +76,5 @@
         <p>Bay Area, California</p>
       </div>
     </footer>
-
-    <script src="projects.js"></script>
-    <script src="main.js"></script>
   </body>
 </html>
