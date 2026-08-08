@@ -1,0 +1,55 @@
+/**
+ * Edit this file to update projects on ScottTaylor.me.
+ * Set `url` to a full link (https://...) or leave it empty for no link.
+ */
+window.PROJECTS = [
+  {
+    name: "Skyline Commercial Cleaning",
+    tag: "Local Service Business",
+    description:
+      "Commercial cleaning services for businesses in San Francisco and the Peninsula.",
+    url: "https://skylinecleaningca.com",
+  },
+  {
+    name: "Opaque",
+    tag: "Snail Mail Newsletter",
+    description:
+      "A snail-mail newsletter where you simulate being an entrepreneur and practice decision-making under uncertainty — a way to fail, make mistakes, and learn without risking your life savings.",
+    url: "https://tally.so/r/WOkRLP",
+  },
+  {
+    name: "Tailor Made Thoughts",
+    tag: "Podcast",
+    description:
+      "A podcast at the intersection of building, thinking, and doing.\n\nMost episodes start with a book — business strategy, personal development, sometimes spirituality — and end somewhere useful: a mental model that reframes how you see a problem, or a tool you can actually use to live and work a little better.",
+    url: "https://open.spotify.com/show/033mDoNOh60l2wnQjd0O3w?si=AW_1l3peQxq1kciJ3S4wjA",
+  },
+  {
+    name: "Mailbox Movies",
+    tag: "Software & Business",
+    description:
+      "Old-school Netflix-style DVD and Blu-ray rentals by mail — unlimited variety, unbeatable prices, no late fees.\n\nWhy physical media? The best films are often the ones that have stood the test of time, and they're getting harder to find on any single streaming platform — especially as services pull or censor titles that aren't considered politically correct anymore.",
+    url: "https://mailboxmovies.com",
+  },
+  {
+    name: "Amazon Online Arbitrage",
+    tag: "E-commerce",
+    description:
+      "Finding and reselling products on Amazon — sourcing deals and building a retail operation online.",
+    url: "https://x.com/FlipMeUpScotty",
+  },
+  {
+    name: "Shunya",
+    tag: "Physical Product",
+    description:
+      "The first micro plastic-free shaker bottle.\n\nShūnya (शून्य) is Sanskrit for nothing, emptiness, void — a name that fits because there's no plastic in it.",
+    url: "https://www.facebook.com/profile.php?id=61567987701264",
+  },
+  {
+    name: "Entrepreneurial Mastermind",
+    tag: "Mastermind",
+    description:
+      "Worldforge Collective is a mastermind for beginning entrepreneurs — people in the early stages who want to build something real and move faster than they would alone.\n\nWe meet weekly to share progress, bounce ideas off each other, and hold each other accountable so goals actually get hit.",
+    url: "https://www.skool.com/worldforge/about?ref=009d58db13644ad9891d639e4aae4ab6",
+  },
+];
