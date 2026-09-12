@@ -2,16 +2,6 @@
 # Set url to a full link or leave it blank for no link.
 # Use a blank line inside description: | for paragraph breaks.
 
-- name: Skyline Commercial Cleaning
-  tag: Local Service Business
-  description: Commercial cleaning services for businesses in San Francisco and the Peninsula.
-  url: https://skylinecleaningca.com
-
-- name: Opaque
-  tag: Snail Mail Newsletter
-  description: A snail-mail newsletter where you simulate being an entrepreneur and practice decision-making under uncertainty — a way to fail, make mistakes, and learn without risking your life savings.
-  url: https://opaqueletter.com
-
 - name: Tailor Made Thoughts
   tag: Podcast
   description: |
@@ -19,6 +9,19 @@
 
     Most episodes start with a book — business strategy, personal development, sometimes spirituality — and end somewhere useful: a mental model that reframes how you see a problem, or a tool you can actually use to live and work a little better.
   url: https://taylormadethoughts.com
+
+- name: Entrepreneurial Mastermind
+  tag: Mastermind
+  description: |
+    Worldforge Collective is a mastermind for beginning entrepreneurs — people in the early stages who want to build something real and move faster than they would alone.
+
+    We meet weekly to share progress, bounce ideas off each other, and hold each other accountable so goals actually get hit.
+  url: https://www.skool.com/attempt-6693
+
+- name: Opaque
+  tag: Snail Mail Newsletter
+  description: A snail-mail newsletter where you simulate being an entrepreneur and practice decision-making under uncertainty — a way to fail, make mistakes, and learn without risking your life savings.
+  url: https://opaqueletter.com
 
 - name: Mailbox Movies
   tag: Software & Business
@@ -28,11 +31,6 @@
     Why physical media? The best films are often the ones that have stood the test of time, and they're getting harder to find on any single streaming platform — especially as services pull or censor titles that aren't considered politically correct anymore.
   url: https://mailboxmovies.com
 
-- name: Amazon Online Arbitrage
-  tag: E-commerce
-  description: Finding and reselling products on Amazon — sourcing deals and building a retail operation online.
-  url: https://x.com/FlipMeUpScotty
-
 - name: Shunya
   tag: Physical Product
   description: |
@@ -41,10 +39,12 @@
     Shūnya (शून्य) is Sanskrit for nothing, emptiness, void — a name that fits because there's no plastic in it.
   url: https://www.facebook.com/profile.php?id=61567987701264
 
-- name: Entrepreneurial Mastermind
-  tag: Mastermind
-  description: |
-    Worldforge Collective is a mastermind for beginning entrepreneurs — people in the early stages who want to build something real and move faster than they would alone.
+- name: Skyline Commercial Cleaning
+  tag: Local Service Business
+  description: Commercial cleaning services for businesses in San Francisco and the Peninsula.
+  url: https://skylinecleaningca.com
 
-    We meet weekly to share progress, bounce ideas off each other, and hold each other accountable so goals actually get hit.
-  url: https://www.skool.com/worldforge/about?ref=009d58db13644ad9891d639e4aae4ab6
+- name: Amazon Online Arbitrage
+  tag: E-commerce
+  description: Finding and reselling products on Amazon — sourcing deals and building a retail operation online.
+  url: https://x.com/FlipMeUpScotty
