@@ -11,6 +11,7 @@ github_url: https://github.com/smtlaissezfaire
 # Replace the URL below. The "TODO" badge hides once REPLACE_ME is gone.
 x_url: https://x.com/REPLACE_ME
 
-# Headshot. Replace assets/images/scott-taylor.jpg with a portrait
-# (about 4:5, at least 800px wide). Keep this path, or point it at the new file.
+# Headshot. The file is Scott's photo at its native 293×293 pixels.
+# Replace assets/images/scott-taylor.jpg to swap it, or point portrait at a new file.
+# The page never displays it larger than 293px, so a bigger file can be swapped in later.
 portrait: /assets/images/scott-taylor.jpg

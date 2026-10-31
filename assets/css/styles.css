@@ -1,36 +1,36 @@
 :root {
   color-scheme: light;
-  --paper: #f6f3ee;
-  --ink: #1c1916;
-  --muted: #5e574f;
-  --rule: #e2dad0;
-  --link: #7a3824;
-  --link-hover: #542214;
-  --portrait-mat: #ebe4da;
-  --surface: #f6f3ee;
-  --text: #1c1916;
-  --border: #e2dad0;
-  --accent: #7a3824;
-  --focus: #7a3824;
-  --bg: #f6f3ee;
+  --paper: #fafafa;
+  --ink: #111111;
+  --muted: #4d4d4d;
+  --rule: #e6e6e6;
+  --link: #111111;
+  --link-hover: #111111;
+  --portrait-mat: #ececec;
+  --surface: #ffffff;
+  --text: #111111;
+  --border: #e6e6e6;
+  --accent: #111111;
+  --focus: #111111;
+  --bg: #fafafa;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --paper: #141311;
-    --ink: #f4f0e8;
-    --muted: #c8bfb4;
-    --rule: #3a342e;
-    --link: #e8b6a6;
-    --link-hover: #f6d8ce;
-    --portrait-mat: #2a2622;
-    --surface: #1c1a17;
-    --text: #f4f0e8;
-    --border: #3a342e;
-    --accent: #e8b6a6;
-    --focus: #e8b6a6;
-    --bg: #141311;
+    --paper: #111111;
+    --ink: #f5f5f5;
+    --muted: #b3b3b3;
+    --rule: #2c2c2c;
+    --link: #f5f5f5;
+    --link-hover: #ffffff;
+    --portrait-mat: #222222;
+    --surface: #1a1a1a;
+    --text: #f5f5f5;
+    --border: #2c2c2c;
+    --accent: #f5f5f5;
+    --focus: #f5f5f5;
+    --bg: #111111;
   }
 }
 
@@ -50,7 +50,7 @@ body {
   min-height: 100vh;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
   font-size: 1.0625rem;
   font-weight: 400;
   line-height: 1.6;
@@ -209,16 +209,18 @@ a:hover {
 }
 
 .portrait {
-  width: 7.5rem;
-  margin: 0 0 1.35rem;
+  width: 293px;
+  max-width: 100%;
+  margin: 0 0 1.25rem;
 }
 
 .portrait-frame {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   overflow: hidden;
   background: var(--portrait-mat);
   border: 1px solid var(--rule);
+  border-radius: 2px;
 }
 
 .portrait-frame img {
@@ -245,8 +247,8 @@ a:hover {
 }
 
 .monogram {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -270,35 +272,37 @@ h1,
 h2,
 h3,
 .entry-title,
-.wordmark,
+.lead,
 .page-intro .lead {
-  font-family: "Instrument Serif", "Iowan Old Style", Palatino, Georgia, serif;
-  font-weight: 400;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .intro h1,
 .page-intro h1 {
-  margin: 0.35rem 0 0;
-  font-size: clamp(2.8rem, 9vw, 4.4rem);
-  letter-spacing: -0.03em;
-  line-height: 0.96;
+  margin: 0.2rem 0 0;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  line-height: 1.1;
   text-wrap: balance;
 }
 
 .page-intro h1 {
-  max-width: 16em;
-  font-size: clamp(2.35rem, 6vw, 3.35rem);
-  line-height: 1.05;
+  max-width: 18em;
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  line-height: 1.15;
 }
 
 .lead,
 .page-intro .lead {
-  margin: 0.85rem 0 0;
+  margin: 0.7rem 0 0;
   max-width: 36rem;
   color: var(--ink);
-  font-size: 1.35rem;
-  font-style: italic;
-  line-height: 1.35;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
 }
 
 .statement {
@@ -326,9 +330,8 @@ h3,
 
 .section-heading h2 {
   margin: 0;
-  font-size: clamp(1.85rem, 3vw, 2.25rem);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 .section-heading p {
@@ -353,7 +356,7 @@ h3,
 
 .entry-tag {
   margin: 0;
-  color: var(--link);
+  color: var(--muted);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -361,10 +364,9 @@ h3,
 }
 
 .entry-title {
-  margin: 0.25rem 0 0.4rem;
-  font-size: clamp(1.45rem, 2.5vw, 1.75rem);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+  margin: 0.2rem 0 0.35rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
 }
 
 .entry-title a {
