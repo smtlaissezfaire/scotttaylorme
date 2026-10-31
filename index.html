@@ -64,12 +64,12 @@ layout: default
       <li class="project-card">
         <span class="project-tag">{{ item.when }}</span>
         <h3 class="project-title">
-          <a href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">{{ item.title }}</a>
+          <a href="{{ '/failures/' | relative_url }}#{{ item.slug }}">{{ item.title }}</a>
         </h3>
         <div class="project-description">
           <p>{{ item.teaser }}</p>
         </div>
-        <a class="project-link" href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">Read the notes →</a>
+        <a class="project-link" href="{{ '/failures/' | relative_url }}#{{ item.slug }}">Read the notes →</a>
       </li>
       {% endfor %}
     </ul>

@@ -1,4 +1,4 @@
-# Failed experiments shown on the home page and at /failures/.
+# Failed experiments listed on the home page. Notes render on /failures/#<slug>.
 
 - title: "SafeToFail: START, ATTEMPT, and an automated X account"
   when: September–October 2026
