@@ -1,0 +1,12 @@
+<script>
+(function () {
+  var slug = (location.hash || "").replace(/^#/, "").replace(/\/$/, "");
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return;
+  var pages = {
+    {% for item in site.data.failures %}
+    {{ item.slug | jsonify }}: {{ item.slug | prepend: "/failures/" | append: "/" | relative_url | jsonify }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+  if (pages[slug]) location.replace(pages[slug]);
+})();
+</script>

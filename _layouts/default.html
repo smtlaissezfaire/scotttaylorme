@@ -18,6 +18,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+    {% if page.url == "/failures/" %}
+    {% include failure-hash-redirect.html %}
+    {% endif %}
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
