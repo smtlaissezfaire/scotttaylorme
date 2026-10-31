@@ -1,0 +1,31 @@
+---
+layout: default
+title: Failed experiments
+description: Notes on experiments Scott Taylor tried and shut down, starting with SafeToFail.
+permalink: /failures/
+---
+<header class="site-header page-header">
+  <div class="container">
+    <p class="eyebrow"><a href="{{ '/' | relative_url }}">ScottTaylor.me</a></p>
+    <h1>Failed experiments</h1>
+    <p class="lead">Things I tried, shut down, and kept the notes from.</p>
+    {% include nav.html %}
+  </div>
+</header>
+
+<main class="container">
+  <ul class="project-list">
+    {% for item in site.data.failures %}
+    <li class="project-card">
+      <span class="project-tag">{{ item.when }}</span>
+      <h2 class="project-title">
+        <a href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">{{ item.title }}</a>
+      </h2>
+      <div class="project-description">
+        <p>{{ item.teaser }}</p>
+      </div>
+      <a class="project-link" href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">Read the notes →</a>
+    </li>
+    {% endfor %}
+  </ul>
+</main>

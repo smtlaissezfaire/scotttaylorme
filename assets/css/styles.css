@@ -211,3 +211,115 @@ h1 {
 .site-footer p {
   margin: 0;
 }
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  box-shadow: 0 1px 2px rgba(31, 28, 24, 0.06);
+}
+
+.nav-link:hover {
+  color: var(--accent-hover);
+  border-color: rgba(26, 92, 75, 0.35);
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--accent);
+  border-color: rgba(26, 92, 75, 0.45);
+  background: rgba(26, 92, 75, 0.08);
+}
+
+.nav-link:focus-visible,
+.eyebrow a:focus-visible,
+.back-link a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.eyebrow a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.eyebrow a:hover {
+  color: var(--accent);
+}
+
+.page-header {
+  padding: 3rem 0 1.5rem;
+}
+
+.page-header h1 {
+  max-width: 18em;
+  font-size: clamp(2.05rem, 4.6vw, 2.85rem);
+}
+
+.failures-home {
+  margin-top: 3.5rem;
+}
+
+.back-link {
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+}
+
+.back-link a {
+  text-decoration: none;
+}
+
+.prose h2 {
+  margin: 2.6rem 0 0.75rem;
+  font-size: clamp(1.55rem, 3vw, 1.9rem);
+}
+
+.prose h3 {
+  margin: 1.9rem 0 0.5rem;
+  font-size: 1.28rem;
+}
+
+.prose p {
+  margin: 0 0 1rem;
+  max-width: 40rem;
+}
+
+.prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+}
+
+.prose li + li {
+  margin-top: 0.7rem;
+}
+
+.shot {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  background: #111;
+}
+
+.shot figcaption {
+  margin-top: 0.5rem;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.shot-notice {
+  max-width: 36rem;
+}
