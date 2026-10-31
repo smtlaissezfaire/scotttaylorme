@@ -7,8 +7,8 @@
       name="description"
       content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
     />
-    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f4f0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)" />
     <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="topbar">
       <div class="frame topbar-inner">
-        <a class="wordmark" href="{{ '/' | relative_url }}">ScottTaylor.me</a>
+        <a class="wordmark" href="{{ '/' | relative_url }}">Scott Taylor</a>
         {% include social.html %}
       </div>
     </header>
@@ -33,6 +33,7 @@
       </main>
       <footer class="colophon">
         <p>Bay Area, California</p>
+        <p>scotttaylor.me</p>
       </footer>
     </div>
   </body>

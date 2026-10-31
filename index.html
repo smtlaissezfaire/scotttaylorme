@@ -31,7 +31,7 @@ layout: default
       physical products to podcasts.
     </p>
     <p class="more">
-      <a href="{{ '/failures/' | relative_url }}">Failed experiments</a>
+      <a href="{{ '/failures/' | relative_url }}">Failed experiments{% include arrow.html dir="right" %}</a>
     </p>
   </div>
 </header>
@@ -44,12 +44,18 @@ layout: default
   <ol class="entries">
     {% for project in site.data.projects %}
     <li class="entry">
-      <p class="entry-tag">{{ project.tag }}</p>
       <h3 class="entry-title">
         {% if project.url %}
-        <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}<span class="sr-only"> (opens in a new tab)</span></a>
+        <a class="entry-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+          <span class="entry-name">{{ project.name }}</span>
+          <span class="entry-tag"><span class="entry-dot" aria-hidden="true"></span>{{ project.tag }}</span>
+          <span class="entry-go">Visit{% include arrow.html %}<span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
         {% else %}
-        {{ project.name }}
+        <span class="entry-link">
+          <span class="entry-name">{{ project.name }}</span>
+          <span class="entry-tag"><span class="entry-dot" aria-hidden="true"></span>{{ project.tag }}</span>
+        </span>
         {% endif %}
       </h3>
       <div class="entry-description">
@@ -63,9 +69,6 @@ layout: default
         {% endif %}
         {% endfor %}
       </div>
-      {% if project.url %}
-      <a class="entry-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">Visit →<span class="sr-only"> (opens in a new tab)</span></a>
-      {% endif %}
     </li>
     {% endfor %}
   </ol>
