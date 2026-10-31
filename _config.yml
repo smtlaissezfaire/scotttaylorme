@@ -13,5 +13,6 @@ x_url: https://x.com/REPLACE_ME
 
 # Headshot. The file is Scott's photo at its native 293×293 pixels.
 # Replace assets/images/scott-taylor.jpg to swap it, or point portrait at a new file.
-# The page never displays it larger than 293px, so a bigger file can be swapped in later.
+# The page shows it at 128px, or 152px from 720px up — never larger than 293px.
+# A bigger file can be swapped in later.
 portrait: /assets/images/scott-taylor.jpg

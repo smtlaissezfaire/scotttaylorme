@@ -205,13 +205,23 @@ a:hover {
 }
 
 .intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.15rem 1.35rem;
   padding-top: 2.25rem;
 }
 
+.intro-copy {
+  flex: 1 1 12rem;
+  min-width: min(100%, 11.5rem);
+}
+
 .portrait {
-  width: 293px;
+  width: 128px;
   max-width: 100%;
-  margin: 0 0 1.25rem;
+  margin: 0;
+  flex: 0 0 auto;
 }
 
 .portrait-frame {
@@ -282,8 +292,8 @@ h3,
 
 .intro h1,
 .page-intro h1 {
-  margin: 0.2rem 0 0;
-  font-size: clamp(2.25rem, 5vw, 3rem);
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.65rem);
   line-height: 1.1;
   text-wrap: balance;
 }
@@ -495,6 +505,10 @@ h3,
   .intro,
   .page-intro {
     padding-top: 2.75rem;
+  }
+
+  .portrait {
+    width: 152px;
   }
 }
 
