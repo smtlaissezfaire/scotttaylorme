@@ -1,9 +1,9 @@
-# Failed experiments shown on the home page and at /failures/.
+# Failed experiments. The writeup for each slug is on /failures/#<slug>.
 
 - title: "SafeToFail: START, ATTEMPT, and an automated X account"
   when: September–October 2026
   slug: safetofail
-  teaser: Two communities, an automated account on X, and sales letters to about 100 newly registered California businesses. Shut down October 31, 2026.
+  teaser: Two communities, sales letters to about 100 newly registered California businesses, and an automated account on X. Shut down October 31, 2026.
 
 - title: "Cali Cleaning Crew: residential house cleaning"
   when: A few months

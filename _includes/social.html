@@ -12,12 +12,7 @@
     </a>
   </li>
   <li>
-    <a
-      href="{{ site.x_url }}"
-      target="_blank"
-      rel="{% unless site.x_url contains 'REPLACE_ME' %}me {% endunless %}noopener noreferrer"
-      {% if site.x_url contains "REPLACE_ME" %}title="TODO: replace with your X profile in _config.yml"{% endif %}
-    >
+    <a href="{{ site.x_url }}" target="_blank" rel="me noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path
           fill="currentColor"
@@ -25,9 +20,6 @@
         />
       </svg>
       <span class="social-label">x.com</span>
-      {% if site.x_url contains "REPLACE_ME" %}
-      <span class="todo">TODO</span>
-      {% endif %}
       <span class="sr-only"> (opens in a new tab)</span>
     </a>
   </li>

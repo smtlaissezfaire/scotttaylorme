@@ -209,17 +209,6 @@ a:hover {
   text-decoration: none;
 }
 
-.todo {
-  padding: 0.08rem 0.35rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
-}
-
 .page {
   padding-bottom: 3rem;
 }
@@ -623,8 +612,26 @@ h3,
   padding-top: 0.35rem;
 }
 
+.prose .page-intro h2 {
+  margin: 0;
+  max-width: 18em;
+  font-size: clamp(1.75rem, 3.4vw, 2.2rem);
+  letter-spacing: -0.034em;
+  line-height: 1.15;
+}
+
 .prose {
   margin-top: 1.15rem;
+}
+
+.prose + .prose {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.prose[id] {
+  scroll-margin-top: 4.75rem;
 }
 
 .prose a {
