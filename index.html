@@ -1,14 +1,38 @@
 ---
 layout: default
 ---
-<p class="statement">
-  I build software under the handle
-  <a href="https://railsnewbie.com" target="_blank" rel="noopener noreferrer"
-    >smtlaissezfaire<span class="sr-only"> (opens in a new tab)</span></a
-  >
-  and start businesses that solve real problems — from local services in my own backyard to
-  physical products to podcasts.
-</p>
+<header class="intro">
+  <!-- Headshot slot: site.portrait in _config.yml, default /assets/images/scott-taylor.jpg -->
+  <figure class="portrait">
+    <div class="portrait-frame">
+      <img
+        src="{{ site.portrait | relative_url }}"
+        alt="Portrait of Scott Taylor"
+        width="800"
+        height="1000"
+        fetchpriority="high"
+        onerror="this.remove()"
+      />
+      <div class="portrait-fallback" aria-hidden="true">
+        <span class="monogram">ST</span>
+        <span class="portrait-kicker">Photo</span>
+      </div>
+    </div>
+  </figure>
+  <h1>{{ site.title }}</h1>
+  <p class="lead">Entrepreneur and software developer based in the Bay Area, California.</p>
+  <p class="statement">
+    I build software under the handle
+    <a href="https://railsnewbie.com" target="_blank" rel="noopener noreferrer"
+      >smtlaissezfaire<span class="sr-only"> (opens in a new tab)</span></a
+    >
+    and start businesses that solve real problems — from local services in my own backyard to
+    physical products to podcasts.
+  </p>
+  <p class="more">
+    <a href="{{ '/failures/' | relative_url }}">Failed experiments</a>
+  </p>
+</header>
 
 <section class="section" aria-labelledby="projects-heading">
   <div class="section-heading">
@@ -27,9 +51,14 @@ layout: default
         {% endif %}
       </h3>
       <div class="entry-description">
-        {% assign paragraphs = project.description | strip | split: "\n\n" %}
+        {% assign newline = "
+" %}
+        {% assign paragraphs = project.description | strip | split: newline %}
         {% for paragraph in paragraphs %}
-        <p>{{ paragraph }}</p>
+        {% assign text = paragraph | strip %}
+        {% if text != "" %}
+        <p>{{ text }}</p>
+        {% endif %}
         {% endfor %}
       </div>
       {% if project.url %}
@@ -38,28 +67,4 @@ layout: default
     </li>
     {% endfor %}
   </ol>
-</section>
-
-<section class="section" aria-labelledby="failures-heading">
-  <div class="section-heading">
-    <h2 id="failures-heading">Failed experiments</h2>
-    <p>
-      Things I tried, shut down, and kept the notes from.
-      <a href="{{ '/failures/' | relative_url }}">See all of them</a>.
-    </p>
-  </div>
-  <ul class="entries entries-notes">
-    {% for item in site.data.failures %}
-    <li class="entry">
-      <p class="entry-tag">{{ item.when }}</p>
-      <h3 class="entry-title">
-        <a href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">{{ item.title }}</a>
-      </h3>
-      <div class="entry-description">
-        <p>{{ item.teaser }}</p>
-      </div>
-      <a class="entry-link" href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">Read the notes →</a>
-    </li>
-    {% endfor %}
-  </ul>
 </section>

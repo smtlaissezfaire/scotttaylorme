@@ -22,7 +22,7 @@
 }
 
 .shot-thumb:hover {
-  border-color: rgba(26, 92, 75, 0.55);
+  border-color: var(--accent);
 }
 
 .shot-thumb:focus-visible {
