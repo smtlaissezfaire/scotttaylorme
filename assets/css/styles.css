@@ -225,24 +225,37 @@ a:hover {
 }
 
 .intro {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 1.15rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "photo copy"
+    "bio bio";
+  align-items: center;
+  column-gap: 1.15rem;
+  row-gap: 1.2rem;
   padding-top: 2.5rem;
 }
 
 .intro-copy {
-  flex: 1 1 12rem;
-  min-width: min(100%, 11.5rem);
-  padding-top: 0.15rem;
+  grid-area: copy;
+  min-width: 0;
+}
+
+.intro-bio {
+  grid-area: bio;
+  min-width: 0;
+}
+
+.intro-bio .statement {
+  margin-top: 0;
 }
 
 .portrait {
+  grid-area: photo;
   width: 128px;
   max-width: 100%;
   margin: 0;
-  flex: 0 0 auto;
+  align-self: center;
 }
 
 .portrait-frame {
@@ -685,8 +698,26 @@ h3,
     padding-top: 3.25rem;
   }
 
+  .intro {
+    grid-template-areas:
+      "photo copy"
+      "photo bio";
+    align-items: start;
+    column-gap: 1.5rem;
+    row-gap: 0;
+  }
+
+  .intro-copy {
+    padding-top: 0.15rem;
+  }
+
+  .intro-bio .statement {
+    margin-top: 0.85rem;
+  }
+
   .portrait {
     width: 152px;
+    align-self: start;
   }
 
   .intro h1 {
