@@ -1,3 +1,12 @@
 title: Scott Taylor
 description: Scott Taylor — entrepreneur and software developer in the Bay Area.
 url: https://scotttaylor.me
+
+github_url: https://github.com/smtlaissezfaire
+x_url: https://x.com/smtlaissezfaire
+
+# Headshot. The file is Scott's photo at its native 293×293 pixels.
+# Replace assets/images/scott-taylor.jpg to swap it, or point portrait at a new file.
+# The page shows it at 128px, or 152px from 720px up — never larger than 293px.
+# A bigger file can be swapped in later.
+portrait: /assets/images/scott-taylor.jpg

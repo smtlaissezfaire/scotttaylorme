@@ -1,0 +1,7 @@
+<svg class="arrow {% if include.dir == "right" %}arrow-right{% elsif include.dir == "left" %}arrow-left{% else %}arrow-ne{% endif %}" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+  {% if include.dir == "right" or include.dir == "left" %}
+  <path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  {% else %}
+  <path d="M4.5 11.5 11.5 4.5M6.25 4.5H11.5V9.75" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  {% endif %}
+</svg>
