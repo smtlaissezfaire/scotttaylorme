@@ -1,4 +1,5 @@
-# Failed experiments. The writeup for each slug is on /failures/#<slug>.
+# Failed experiments. Each slug is a page at /failures/<slug>/.
+# /failures/ lists the title and date. Old /failures/#<slug> links redirect there.
 
 - title: "SafeToFail: START, ATTEMPT, and an automated X account"
   when: September–October 2026
