@@ -1,77 +1,77 @@
 ---
 layout: default
 ---
-<header class="site-header">
-  <div class="container">
-    <p class="eyebrow">ScottTaylor.me</p>
+<header class="intro">
+  <!-- Headshot slot: site.portrait in _config.yml, default /assets/images/scott-taylor.jpg -->
+  <figure class="portrait">
+    <div class="portrait-frame">
+      <img
+        src="{{ site.portrait | relative_url }}"
+        alt="Portrait of Scott Taylor"
+        width="293"
+        height="293"
+        fetchpriority="high"
+        onerror="this.remove()"
+      />
+      <div class="portrait-fallback" aria-hidden="true">
+        <span class="monogram">ST</span>
+        <span class="portrait-kicker">Photo</span>
+      </div>
+    </div>
+  </figure>
+  <div class="intro-copy">
     <h1>{{ site.title }}</h1>
-    <p class="lead">
-      Entrepreneur and software developer based in the Bay Area, California.
-    </p>
-    <p class="intro">
+    <p class="lead">Entrepreneur and software developer based in the Bay Area, California.</p>
+  </div>
+  <div class="intro-bio">
+    <p class="statement">
       I build software under the handle
       <a href="https://railsnewbie.com" target="_blank" rel="noopener noreferrer"
-        >smtlaissezfaire</a
+        >smtlaissezfaire<span class="sr-only"> (opens in a new tab)</span></a
       >
       and start businesses that solve real problems — from local services in my own backyard to
       physical products to podcasts.
     </p>
-    {% include nav.html %}
+    <p class="more">
+      <a href="{{ '/failures/' | relative_url }}">Failed experiments{% include arrow.html dir="right" %}</a>
+    </p>
   </div>
 </header>
 
-<main class="container">
-  <section class="projects" aria-labelledby="projects-heading">
-    <div class="section-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <p>Things I’ve built, run, or am working on.</p>
-    </div>
-    <ul class="project-list">
-      {% for project in site.data.projects %}
-      <li class="project-card">
-        <span class="project-tag">{{ project.tag }}</span>
-        <h3 class="project-title">
-          {% if project.url %}
-          <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
-          {% else %}
-          {{ project.name }}
-          {% endif %}
-        </h3>
-        <div class="project-description">
-          {% assign paragraphs = project.description | strip | split: "\n\n" %}
-          {% for paragraph in paragraphs %}
-          <p>{{ paragraph }}</p>
-          {% endfor %}
-        </div>
+<section class="section" aria-labelledby="projects-heading">
+  <div class="section-heading">
+    <h2 id="projects-heading">Projects</h2>
+    <p>Things I’ve built, run, or am working on.</p>
+  </div>
+  <ol class="entries">
+    {% for project in site.data.projects %}
+    <li class="entry">
+      <h3 class="entry-title">
         {% if project.url %}
-        <a class="project-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">Visit →</a>
+        <a class="entry-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+          <span class="entry-name">{{ project.name }}</span>
+          <span class="entry-tag"><span class="entry-dot" aria-hidden="true"></span>{{ project.tag }}</span>
+          <span class="entry-go">Visit{% include arrow.html %}<span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+        {% else %}
+        <span class="entry-link">
+          <span class="entry-name">{{ project.name }}</span>
+          <span class="entry-tag"><span class="entry-dot" aria-hidden="true"></span>{{ project.tag }}</span>
+        </span>
         {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section class="failures-home" aria-labelledby="failures-heading">
-    <div class="section-heading">
-      <h2 id="failures-heading">Failed experiments</h2>
-      <p>
-        Things I tried, shut down, and kept the notes from.
-        <a href="{{ '/failures/' | relative_url }}">See all of them</a>.
-      </p>
-    </div>
-    <ul class="project-list">
-      {% for item in site.data.failures %}
-      <li class="project-card">
-        <span class="project-tag">{{ item.when }}</span>
-        <h3 class="project-title">
-          <a href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">{{ item.title }}</a>
-        </h3>
-        <div class="project-description">
-          <p>{{ item.teaser }}</p>
-        </div>
-        <a class="project-link" href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">Read the notes →</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-</main>
+      </h3>
+      <div class="entry-description">
+        {% assign newline = "
+" %}
+        {% assign paragraphs = project.description | strip | split: newline %}
+        {% for paragraph in paragraphs %}
+        {% assign text = paragraph | strip %}
+        {% if text != "" %}
+        <p>{{ text }}</p>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

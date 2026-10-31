@@ -5,18 +5,12 @@ description: What Scott tried with SafeToFail in September and October 2026 — 
 permalink: /failures/safetofail/
 ---
 <link rel="stylesheet" href="{{ '/assets/css/shot-lightbox.css' | relative_url }}" />
-<header class="site-header page-header">
-  <div class="container">
-    <p class="eyebrow"><a href="{{ '/' | relative_url }}">ScottTaylor.me</a></p>
+<p class="back-link"><a href="{{ '/failures/' | relative_url }}">{% include arrow.html dir="left" %}Failed experiments</a></p>
+<article class="prose">
+  <header class="page-intro">
     <h1>SafeToFail: START, ATTEMPT, and an automated X account</h1>
     <p class="lead">September–October 2026</p>
-    {% include nav.html %}
-  </div>
-</header>
-
-<main class="container">
-  <p class="back-link"><a href="{{ '/failures/' | relative_url }}">← Failed experiments</a></p>
-  <article class="prose">
+  </header>
     <p>
       I spent September and October 2026 on an experiment called SafeToFail. I wanted a small
       community for people who hadn’t made much yet, and who were willing to try something in the
@@ -186,8 +180,7 @@ permalink: /failures/safetofail/
         response” means no response, not “I couldn’t see a response.”
       </li>
     </ul>
-  </article>
-</main>
+</article>
 
 <dialog class="lightbox" id="shot-lightbox" aria-labelledby="shot-lightbox-caption" closedby="any">
   <button type="button" class="lightbox-close">Close</button>
