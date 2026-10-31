@@ -21,6 +21,11 @@ permalink: /failures/
         <span class="entry-go">Read{% include arrow.html dir="right" %}</span>
       </a>
     </h2>
+    {% if item.summary != blank %}
+    <div class="entry-description">
+      <p>{{ item.summary }}</p>
+    </div>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>
