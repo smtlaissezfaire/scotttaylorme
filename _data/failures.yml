@@ -1,12 +1,13 @@
 # Failed experiments. Each slug is a page at /failures/<slug>/.
-# /failures/ lists the title and date. Old /failures/#<slug> links redirect there.
+# /failures/ lists the title, a one-line summary, and the date.
+# Old /failures/#<slug> links redirect to the page.
 
-- title: "SafeToFail: START, ATTEMPT, and an automated X account"
+- title: "START / ATTEMPT (@SafeToFail)"
+  summary: A community for entrepreneurship
   when: September–October 2026
   slug: safetofail
-  teaser: Two communities, sales letters to about 100 newly registered California businesses, and an automated account on X. Shut down October 31, 2026.
 
-- title: "Cali Cleaning Crew: residential house cleaning"
+- title: "Cali Cleaning Crew"
+  summary: Residential house cleaning
   when: A few months
   slug: cali-cleaning-crew
-  teaser: A house-cleaning business I wanted to scale on recurring revenue. Yelp brought customers, but the economics didn’t work. Shut down after a few months.
