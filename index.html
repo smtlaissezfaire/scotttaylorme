@@ -1,77 +1,65 @@
 ---
 layout: default
 ---
-<header class="site-header">
-  <div class="container">
-    <p class="eyebrow">ScottTaylor.me</p>
-    <h1>{{ site.title }}</h1>
-    <p class="lead">
-      Entrepreneur and software developer based in the Bay Area, California.
-    </p>
-    <p class="intro">
-      I build software under the handle
-      <a href="https://railsnewbie.com" target="_blank" rel="noopener noreferrer"
-        >smtlaissezfaire</a
-      >
-      and start businesses that solve real problems — from local services in my own backyard to
-      physical products to podcasts.
-    </p>
-    {% include nav.html %}
+<p class="statement">
+  I build software under the handle
+  <a href="https://railsnewbie.com" target="_blank" rel="noopener noreferrer"
+    >smtlaissezfaire<span class="sr-only"> (opens in a new tab)</span></a
+  >
+  and start businesses that solve real problems — from local services in my own backyard to
+  physical products to podcasts.
+</p>
+
+<section class="section" aria-labelledby="projects-heading">
+  <div class="section-heading">
+    <h2 id="projects-heading">Projects</h2>
+    <p>Things I’ve built, run, or am working on.</p>
   </div>
-</header>
-
-<main class="container">
-  <section class="projects" aria-labelledby="projects-heading">
-    <div class="section-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <p>Things I’ve built, run, or am working on.</p>
-    </div>
-    <ul class="project-list">
-      {% for project in site.data.projects %}
-      <li class="project-card">
-        <span class="project-tag">{{ project.tag }}</span>
-        <h3 class="project-title">
-          {% if project.url %}
-          <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
-          {% else %}
-          {{ project.name }}
-          {% endif %}
-        </h3>
-        <div class="project-description">
-          {% assign paragraphs = project.description | strip | split: "\n\n" %}
-          {% for paragraph in paragraphs %}
-          <p>{{ paragraph }}</p>
-          {% endfor %}
-        </div>
+  <ol class="entries">
+    {% for project in site.data.projects %}
+    <li class="entry">
+      <p class="entry-tag">{{ project.tag }}</p>
+      <h3 class="entry-title">
         {% if project.url %}
-        <a class="project-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">Visit →</a>
+        <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }}<span class="sr-only"> (opens in a new tab)</span></a>
+        {% else %}
+        {{ project.name }}
         {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
+      </h3>
+      <div class="entry-description">
+        {% assign paragraphs = project.description | strip | split: "\n\n" %}
+        {% for paragraph in paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+      {% if project.url %}
+      <a class="entry-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">Visit →<span class="sr-only"> (opens in a new tab)</span></a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
 
-  <section class="failures-home" aria-labelledby="failures-heading">
-    <div class="section-heading">
-      <h2 id="failures-heading">Failed experiments</h2>
-      <p>
-        Things I tried, shut down, and kept the notes from.
-        <a href="{{ '/failures/' | relative_url }}">See all of them</a>.
-      </p>
-    </div>
-    <ul class="project-list">
-      {% for item in site.data.failures %}
-      <li class="project-card">
-        <span class="project-tag">{{ item.when }}</span>
-        <h3 class="project-title">
-          <a href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">{{ item.title }}</a>
-        </h3>
-        <div class="project-description">
-          <p>{{ item.teaser }}</p>
-        </div>
-        <a class="project-link" href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">Read the notes →</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-</main>
+<section class="section" aria-labelledby="failures-heading">
+  <div class="section-heading">
+    <h2 id="failures-heading">Failed experiments</h2>
+    <p>
+      Things I tried, shut down, and kept the notes from.
+      <a href="{{ '/failures/' | relative_url }}">See all of them</a>.
+    </p>
+  </div>
+  <ul class="entries entries-notes">
+    {% for item in site.data.failures %}
+    <li class="entry">
+      <p class="entry-tag">{{ item.when }}</p>
+      <h3 class="entry-title">
+        <a href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">{{ item.title }}</a>
+      </h3>
+      <div class="entry-description">
+        <p>{{ item.teaser }}</p>
+      </div>
+      <a class="entry-link" href="{{ item.slug | prepend: '/failures/' | append: '/' | relative_url }}">Read the notes →</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

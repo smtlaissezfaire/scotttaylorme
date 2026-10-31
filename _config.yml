@@ -1,3 +1,16 @@
 title: Scott Taylor
 description: Scott Taylor — entrepreneur and software developer in the Bay Area.
 url: https://scotttaylor.me
+
+github_url: https://github.com/smtlaissezfaire
+
+# TODO: Scott's personal X profile.
+# https://x.com/FlipMeUpScotty is the Amazon Online Arbitrage project, and
+# @SafeToFail was the experiment account deactivated on October 31, 2026.
+# GitHub has no twitter_username, and railsnewbie.com doesn't list X.
+# Replace the URL below. The "TODO" badge hides once REPLACE_ME is gone.
+x_url: https://x.com/REPLACE_ME
+
+# Headshot. Replace assets/images/scott-taylor.jpg with a portrait
+# (about 4:5, at least 800px wide). Keep this path, or point it at the new file.
+portrait: /assets/images/scott-taylor.jpg

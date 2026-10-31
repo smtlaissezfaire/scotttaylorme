@@ -7,21 +7,68 @@
       name="description"
       content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
     />
+    <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)" />
     <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
   </head>
   <body>
-    {{ content }}
-    <footer class="site-footer">
-      <div class="container">
-        <p>Bay Area, California</p>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="shell">
+      <aside class="identity">
+        <div class="identity-inner">
+          <div class="identity-top">
+            <!-- Headshot slot: replace assets/images/scott-taylor.jpg (portrait, about 4:5). -->
+            <figure class="portrait">
+              <div class="portrait-frame">
+                <img
+                  src="{{ site.portrait | relative_url }}"
+                  alt="Portrait of Scott Taylor"
+                  width="800"
+                  height="1000"
+                  fetchpriority="high"
+                  onerror="this.remove()"
+                />
+                <div class="portrait-fallback" aria-hidden="true">
+                  <span class="monogram">ST</span>
+                  <span class="portrait-kicker">Photo</span>
+                </div>
+              </div>
+            </figure>
+            <p class="eyebrow"><a href="{{ '/' | relative_url }}">ScottTaylor.me</a></p>
+            {% assign name_parts = site.title | split: " " %}
+            {% if page.url == "/" %}
+            <h1 class="site-name">
+              {% for part in name_parts %}{% unless forloop.first %}<br>{% endunless %}{{ part }}{% endfor %}
+            </h1>
+            {% else %}
+            <p class="site-name">
+              <a href="{{ '/' | relative_url }}">
+                {% for part in name_parts %}{% unless forloop.first %}<br>{% endunless %}{{ part }}{% endfor %}
+              </a>
+            </p>
+            {% endif %}
+            <p class="role">Entrepreneur and software developer based in the Bay&nbsp;Area, California.</p>
+          </div>
+          {% include social.html %}
+          {% include nav.html %}
+        </div>
+      </aside>
+      <div class="column">
+        <main id="content">
+          {{ content }}
+        </main>
+        <footer class="colophon">
+          <p>Bay Area, California</p>
+        </footer>
       </div>
-    </footer>
+    </div>
   </body>
 </html>
