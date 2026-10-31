@@ -4,6 +4,7 @@ title: "SafeToFail: START, ATTEMPT, and an automated X account"
 description: What Scott tried with SafeToFail in September and October 2026 — two communities, an automated X account, and a round of direct mail — and why he shut it down.
 permalink: /failures/safetofail/
 ---
+<link rel="stylesheet" href="{{ '/assets/css/shot-lightbox.css' | relative_url }}" />
 <header class="site-header page-header">
   <div class="container">
     <p class="eyebrow"><a href="{{ '/' | relative_url }}">ScottTaylor.me</a></p>
@@ -35,23 +36,29 @@ permalink: /failures/safetofail/
     </p>
     <p>It ended with three members, including me.</p>
     <figure class="shot">
-      <img
-        src="{{ '/assets/images/failures/start-about.webp' | relative_url }}"
-        width="1600"
-        height="893"
-        alt="START About page. The cover reads Ideas, Action, Your First Dollar. The side panel shows 3 members and a $1 price."
-        loading="lazy"
-      />
+      <a class="shot-thumb" aria-haspopup="dialog" aria-controls="shot-lightbox" href="{{ '/assets/images/failures/start-about.webp' | relative_url }}">
+        <img
+          src="{{ '/assets/images/failures/start-about.webp' | relative_url }}"
+          width="1600"
+          height="893"
+          alt="START About page. The cover reads Ideas, Action, Your First Dollar. The side panel shows 3 members and a $1 price."
+          loading="lazy"
+        />
+        <span class="visually-hidden">View full size</span>
+      </a>
       <figcaption>The START About page. Three members, priced at $1.</figcaption>
     </figure>
     <figure class="shot">
-      <img
-        src="{{ '/assets/images/failures/start-feed.webp' | relative_url }}"
-        width="1280"
-        height="697"
-        alt="START community feed, with a setup checklist and a couple of early posts. The side panel shows 3 members."
-        loading="lazy"
-      />
+      <a class="shot-thumb" aria-haspopup="dialog" aria-controls="shot-lightbox" href="{{ '/assets/images/failures/start-feed.webp' | relative_url }}">
+        <img
+          src="{{ '/assets/images/failures/start-feed.webp' | relative_url }}"
+          width="1280"
+          height="697"
+          alt="START community feed, with a setup checklist and a couple of early posts. The side panel shows 3 members."
+          loading="lazy"
+        />
+        <span class="visually-hidden">View full size</span>
+      </a>
       <figcaption>The START feed. Mostly the setup checklist, and a couple of posts from me.</figcaption>
     </figure>
 
@@ -62,23 +69,29 @@ permalink: /failures/safetofail/
     </p>
     <p>It ended with four members, including me. Nobody outside that group paid to join.</p>
     <figure class="shot">
-      <img
-        src="{{ '/assets/images/failures/attempt-about.webp' | relative_url }}"
-        width="1800"
-        height="1158"
-        alt="ATTEMPT About page. The cover reads There is no path. Make yours. The side panel shows 4 members and $49 a month."
-        loading="lazy"
-      />
+      <a class="shot-thumb" aria-haspopup="dialog" aria-controls="shot-lightbox" href="{{ '/assets/images/failures/attempt-about.webp' | relative_url }}">
+        <img
+          src="{{ '/assets/images/failures/attempt-about.webp' | relative_url }}"
+          width="1800"
+          height="1158"
+          alt="ATTEMPT About page. The cover reads There is no path. Make yours. The side panel shows 4 members and $49 a month."
+          loading="lazy"
+        />
+        <span class="visually-hidden">View full size</span>
+      </a>
       <figcaption>The ATTEMPT About page. Four members, $49 a month.</figcaption>
     </figure>
     <figure class="shot">
-      <img
-        src="{{ '/assets/images/failures/attempt-feed.webp' | relative_url }}"
-        width="1280"
-        height="697"
-        alt="ATTEMPT community feed, with a setup checklist and early posts. The side panel shows 4 members."
-        loading="lazy"
-      />
+      <a class="shot-thumb" aria-haspopup="dialog" aria-controls="shot-lightbox" href="{{ '/assets/images/failures/attempt-feed.webp' | relative_url }}">
+        <img
+          src="{{ '/assets/images/failures/attempt-feed.webp' | relative_url }}"
+          width="1280"
+          height="697"
+          alt="ATTEMPT community feed, with a setup checklist and early posts. The side panel shows 4 members."
+          loading="lazy"
+        />
+        <span class="visually-hidden">View full size</span>
+      </a>
       <figcaption>The ATTEMPT feed, early on. A setup checklist and a few posts.</figcaption>
     </figure>
 
@@ -95,13 +108,16 @@ permalink: /failures/safetofail/
       and limited its reach. After that, posts got 0–2 views each.
     </p>
     <figure class="shot shot-notice">
-      <img
-        src="{{ '/assets/images/failures/safetofail-x-label.webp' | relative_url }}"
-        width="970"
-        height="1290"
-        alt="X notice titled Why does my account have a label? It says @SafeToFail may contain spam or be engaging in inauthentic behavior, and that its reach may be limited."
-        loading="lazy"
-      />
+      <a class="shot-thumb" aria-haspopup="dialog" aria-controls="shot-lightbox" href="{{ '/assets/images/failures/safetofail-x-label.webp' | relative_url }}">
+        <img
+          src="{{ '/assets/images/failures/safetofail-x-label.webp' | relative_url }}"
+          width="970"
+          height="1290"
+          alt="X notice titled Why does my account have a label? It says @SafeToFail may contain spam or be engaging in inauthentic behavior, and that its reach may be limited."
+          loading="lazy"
+        />
+        <span class="visually-hidden">View full size</span>
+      </a>
       <figcaption>
         The notice X showed on @SafeToFail around October 24, 2026. It says the account may contain
         spam or be engaging in inauthentic behavior, and that reach may be limited. This is where
@@ -172,3 +188,10 @@ permalink: /failures/safetofail/
     </ul>
   </article>
 </main>
+
+<dialog class="lightbox" id="shot-lightbox" aria-labelledby="shot-lightbox-caption" closedby="any">
+  <button type="button" class="lightbox-close">Close</button>
+  <img class="lightbox-image" alt="" />
+  <p class="lightbox-caption" id="shot-lightbox-caption"></p>
+</dialog>
+<script src="{{ '/assets/js/shot-lightbox.js' | relative_url }}"></script>
