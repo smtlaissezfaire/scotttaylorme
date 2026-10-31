@@ -624,6 +624,16 @@ h3,
   margin-top: 1.15rem;
 }
 
+.prose + .prose {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.prose[id] {
+  scroll-margin-top: 4.75rem;
+}
+
 .prose a {
   color: var(--accent);
   font-weight: 500;
